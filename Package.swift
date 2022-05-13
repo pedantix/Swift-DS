@@ -48,5 +48,12 @@ let package = Package(
         .testTarget(
             name: "StackTests",
             dependencies: ["Stack"]),
+        .target(
+            name: "Queue",
+            dependencies: []),
+        .testTarget(
+            name: "QueueTests",
+            dependencies: ["Queue"]),
+
     ]
 )
