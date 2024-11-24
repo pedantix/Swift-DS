@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "DSAlg",
-            targets: ["DSAlg", "Heap", "DisjointSet"]),
+            targets: ["DSAlg", "Heap", "DisjointSet", "Stack", "Queue"]),
         .library(
             name: "Heap",
             targets: ["Heap"]),
@@ -54,6 +54,15 @@ let package = Package(
         .testTarget(
             name: "QueueTests",
             dependencies: ["Queue"]),
+
+
+        // Utility!
+        .target(
+            name: "DataGenerator",
+            dependencies: []),
+        .testTarget(
+            name: "DataGeneratorTests",
+            dependencies: ["DataGenerator"]),
 
     ]
 )
